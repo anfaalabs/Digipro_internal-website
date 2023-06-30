@@ -7,19 +7,19 @@ Install Node.js first, you can download via this link: [click here](https://node
 if you are done, clone this project to your machine
 
 ```bash
-$ git clone https://github.com/anfaalabs/Digipro_internal-website
+git clone https://github.com/anfaalabs/Digipro_internal-website
 ```
 
 Lastly, install the Node.js packages
 
 ```bash
-$ npm install
+npm install
 ```
 
 And Done! You can run this project by typing:
 
 ```bash
-$ npm start
+npm start
 ```
 
 ## How to build
