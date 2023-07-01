@@ -1,0 +1,20 @@
+.btn {
+  @apply py-3 px-5;
+  @apply rounded-lg;
+  @apply transition-all duration-200 ease-in-out;
+  @apply font-semibold;
+
+  &-primary {
+    @apply border border-primary;
+    @apply bg-primary text-white;
+    @apply hover:bg-primary-700 hover:border-primary-700;
+    @apply focus:bg-primary-700 focus:border-primary-700 focus:outline-primary;
+    @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25;
+
+    &-outline {
+      @apply border border-primary;
+      @apply text-primary bg-transparent;
+      @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25;
+    }
+  }
+}

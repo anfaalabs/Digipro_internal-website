@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-300;
+    @apply text-base lg:text-lg font-sans;
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl;
+    @apply mx-auto;
+  }
+
+  @import "./components";
+}
+
+@import "./animations";
