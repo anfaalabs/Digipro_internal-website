@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "parcel \"./src/index.html\"",
-    "build": "parcel build \"./src/index.html\" --dist-dir build"
+    "build": "parcel build \"./src/index.html\" --dist-dir build --public-url https://digipro-dev.anfa.my.id"
   },
   "author": "",
   "license": "ISC",
