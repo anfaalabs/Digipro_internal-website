@@ -3,13 +3,248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Document Title]</title>
+    <meta name="theme-color" content="#09090b" />
 
-    <link rel="stylesheet" href="./styles/app.css" />
-    <script src="./scripts/index.js" defer></script>
+    <!-- Primary Meta Tags -->
+    <title>Digipro - Pocket-Friendly Website Development in Indonesia.</title>
+    <meta
+      name="title"
+      content="Digipro - Pocket-Friendly Website Development in Indonesia."
+    />
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io" />
+    <meta
+      property="og:title"
+      content="Digipro - Pocket-Friendly Website Development in Indonesia."
+    />
+    <meta
+      property="og:description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."
+    />
+    <meta property="og:image" content="./assets/digipro-banner.jpg" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io" />
+    <meta
+      property="twitter:title"
+      content="Digipro - Pocket-Friendly Website Development in Indonesia."
+    />
+    <meta
+      property="twitter:description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."
+    />
+    <meta property="twitter:image" content="./assets/digipro-banner.jpg" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/app.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- scripts -->
+    <script src="./scripts/index.js" defer type="module"></script>
   </head>
   <body>
-    <h1 class="text-red-500">Hello World!!!</h1>
-    <div id="app"></div>
+    <div
+      id="navigation"
+      class="absolute z-40 top-0 left-0 w-full"
+      data-sal="slide-down"
+      data-sal-delay="300"
+      data-sal-duration="500"
+    >
+      <div
+        class="container p-4 lg:px-6 lg:py-8 flex flex-wrap lg:flex-nowrap items-center justify-between relative"
+      >
+        <img
+          src="./assets/logo.svg"
+          alt="Logo"
+          width="56"
+          height="56"
+          class="h-12 w-12 lg:h-14 lg:w-14 lg:mr-20"
+        />
+
+        <button class="navigation-toggler" type="button" title="Open menu">
+          <span class="icon"></span>
+          <span class="icon"></span>
+          <span class="icon"></span>
+        </button>
+
+        <nav class="navigation-menu">
+          <ul>
+            <li>
+              <a class="navigation-link" href="#about" title="About Us"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="navigation-link" href="#services" title="Services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="navigation-link" href="#portfolio" title="Portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a class="navigation-link" href="#pricing" title="Pricing"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                class="navigation-link"
+                href="#testimonials"
+                title="Testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                class="navigation-link"
+                href="#frequently-asked-questions"
+                title="Frequently asked questions"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          href="#"
+          class="whitespace-nowrap hidden lg:block btn btn-primary"
+          title="Whatsapp us"
+        >
+          <i class="fa fa-whatsapp text-lg mr-1"></i>
+          Whatsapp
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <div id="header-wrapper" class="bg-zinc-950 z-0">
+        <!-- Header -->
+        <header class="container relative px-4 pt-36 lg:px-6 lg:pt-56">
+          <!-- Top Header Illustration -->
+          <img
+            src="./assets/header-top-illustration.svg"
+            class="h-44 md:h-56 lg:h-60 w-auto absolute right-0 top-0 -z-0 pointer-events-none"
+            alt="Top page illustration"
+            data-sal="fade"
+            data-sal-duration="1000"
+          />
+
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins max-w-lg md:max-w-3xl mx-auto font-bold text-center text-white md:leading-[56px] lg:leading-[64px] mb-4 lg:mb-8"
+            data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-duration="500"
+          >
+            Pocket-Friendly Website Development in Indonesia.
+          </h1>
+          <p
+            class="text-center max-w-2xl mx-auto lg:text-xl mb-4 lg:mb-8"
+            data-sal="slide-up"
+            data-sal-delay="600"
+            data-sal-duration="500"
+          >
+            Get a High Quality Website without Overspending
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4"
+          >
+            <button
+              type="button"
+              class="w-[90%] max-w-[250px] md:w-[180px] btn btn-primary"
+              title="Whatsapp Us"
+              data-sal="slide-up"
+              data-sal-delay="700"
+              data-sal-duration="500"
+            >
+              <i class="fa fa-whatsapp text-lg mr-1"></i>
+              Whatsapp
+            </button>
+
+            <button
+              type="button"
+              class="w-[90%] max-w-[250px] md:w-[180px] btn btn-primary-outline"
+              title="See pricing"
+              data-sal="slide-up"
+              data-sal-delay="750"
+              data-sal-duration="500"
+            >
+              See Pricing
+            </button>
+          </div>
+
+          <!-- Header website illustration -->
+          <div
+            class="h-auto sm:h-[285px] md:h-[332px] lg:h-[418px] w-full max-w-[767px] rounded-t-3xl overflow-hidden mx-auto relative z-[1] mt-8"
+          >
+            <img
+              src="./assets/header-image.jpg"
+              alt="Header illustration"
+              height="418"
+              width="767"
+              class="w-full h-auto sm:h-[285px] md:h-[332px] lg:h-[418px] pointer-events-none rounded-t-3xl max-w-[767px] mx-auto header-image-animation"
+            />
+          </div>
+
+          <!-- Bottom Header Illustration -->
+          <img
+            src="./assets/header-bottom-illustration.svg"
+            class="h-56 md:h-60 lg:h-80 w-auto absolute left-0 bottom-[150px] sm:bottom-1/3 z-0 pointer-events-none"
+            alt="Top page illustration"
+            data-sal="fade"
+            data-sal-duration="1000"
+          />
+        </header>
+
+        <svg
+          width="1440"
+          height="4"
+          viewBox="0 0 1440 2"
+          class="w-full max-w-[1440px] h-auto mx-auto -translate-y-[2px]"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M680 0L0 2C0 2 414.441 4.00346 680 4C944.778 3.99655 1440 2 1440 2L680 0Z"
+            fill="url(#paint0_linear_203_241)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_203_241"
+              x1="679"
+              y1="1"
+              x2="679"
+              y2="3.00001"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.3" stop-color="#D9D9D9" stop-opacity="0" />
+              <stop offset="0.5" stop-color="#0DC3F2" />
+              <stop offset="0.8" stop-color="#D9D9D9" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- <img
+        src="./assets/divider.svg"
+        alt="Divider"
+        class="w-full max-w-[1440px] h-auto mx-auto"
+      /> -->
+
+      <div class="h-screen"></div>
+    </main>
   </body>
 </html>
