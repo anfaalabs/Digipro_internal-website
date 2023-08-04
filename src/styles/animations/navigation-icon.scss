@@ -1,0 +1,47 @@
+@keyframes nav-icon-1 {
+  0% {
+    transform: translateY(0) rotate(225deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-8px) rotate(0);
+  }
+}
+
+@keyframes nav-icon-1--active {
+  0% {
+    transform: translateY(-8px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(225deg);
+  }
+}
+
+@keyframes nav-icon-3 {
+  0% {
+    transform: translateY(0) rotate(135deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(8px) rotate(0);
+  }
+}
+
+@keyframes nav-icon-3--active {
+  0% {
+    transform: translateY(8px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(135deg);
+  }
+}
