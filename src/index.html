@@ -64,198 +64,606 @@
     <script src="./scripts/index.js" defer type="module"></script>
   </head>
   <body>
-    <div
-      id="navigation"
-      class="absolute z-40 top-0 left-0 w-full"
-      data-sal="slide-down"
-      data-sal-delay="300"
-      data-sal-duration="500"
-    >
-      <div
-        class="container p-4 lg:px-6 lg:py-8 flex flex-wrap lg:flex-nowrap items-center justify-between relative"
-      >
+    <div id="navigation" class="nav">
+      <div class="nav-container">
         <img
           src="./assets/logo.svg"
           alt="Logo"
           width="56"
           height="56"
-          class="h-12 w-12 lg:h-14 lg:w-14 lg:mr-20"
+          class="h-12 w-12 lg:h-14 lg:w-14 lg:mr-40 xl:mr-52"
         />
 
-        <button class="navigation-toggler" type="button" title="Open menu">
-          <span class="icon"></span>
-          <span class="icon"></span>
-          <span class="icon"></span>
+        <button type="button" class="nav__toggler">
+          <i class="icon"></i>
+          <i class="icon"></i>
+          <i class="icon"></i>
         </button>
 
-        <nav class="navigation-menu">
-          <ul>
-            <li>
-              <a class="navigation-link" href="#about" title="About Us"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a class="navigation-link" href="#services" title="Services"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a class="navigation-link" href="#portfolio" title="Portfolio"
-                >Portfolio</a
-              >
-            </li>
-            <li>
-              <a class="navigation-link" href="#pricing" title="Pricing"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                class="navigation-link"
-                href="#testimonials"
-                title="Testimonials"
-                >Testimonials</a
-              >
-            </li>
-            <li>
-              <a
-                class="navigation-link"
-                href="#frequently-asked-questions"
-                title="Frequently asked questions"
-                >FAQ</a
-              >
-            </li>
+        <nav class="nav-menu">
+          <ul
+            class="container lg:w-[unset] px-4 mb-2 lg:mb-0 lg:px-0 nav-menu-links"
+          >
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing</a></li>
           </ul>
-        </nav>
 
-        <a
-          href="#"
-          class="whitespace-nowrap hidden lg:block btn btn-primary"
-          title="Whatsapp us"
-        >
-          <i class="fa fa-whatsapp text-lg mr-1"></i>
-          Whatsapp
-        </a>
+          <div
+            class="container lg:w-[unset] px-4 lg:px-0 nav-menu-buttons"
+            id="navbar-buttons"
+          >
+            <div class="border-t lg:hidden w-full mb-2"></div>
+            <button
+              type="button"
+              class="btn hover:text-heading focus:text-heading"
+            >
+              See Pricing
+            </button>
+            <button type="button" class="btn btn--default">
+              <i class="fab fa-whatsapp mr-1"></i>
+              Whatsapp
+            </button>
+          </div>
+        </nav>
       </div>
     </div>
 
     <main>
-      <div id="header-wrapper" class="bg-zinc-950 z-0">
-        <!-- Header -->
-        <header class="container relative px-4 pt-36 lg:px-6 lg:pt-56">
-          <!-- Top Header Illustration -->
-          <img
-            src="./assets/header-top-illustration.svg"
-            class="h-44 md:h-56 lg:h-60 w-auto absolute right-0 top-0 -z-0 pointer-events-none"
-            alt="Top page illustration"
-            data-sal="fade"
-            data-sal-duration="1000"
-          />
+      <header
+        class="container relative px-4 pt-32 pb-12 lg:pt-[152px] lg:px-6 lg:pb-20"
+      >
+        <!-- Overlays -->
+        <img
+          src="./assets/header-overlay.png"
+          alt="Overlay 1"
+          class="hidden md:block absolute w-40 h-40 -z-10 bottom-[15%] left-0"
+        />
+        <img
+          src="./assets/header-overlay.png"
+          alt="Overlay 2"
+          class="hidden md:block w-56 h-56 absolute -z-10 bottom-[45%] -right-[2.5%]"
+        />
 
+        <section id="header-text" class="mb-8">
           <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins max-w-lg md:max-w-3xl mx-auto font-bold text-center text-white md:leading-[56px] lg:leading-[64px] mb-4 lg:mb-8"
-            data-sal="slide-up"
-            data-sal-delay="500"
-            data-sal-duration="500"
+            class="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-center font-bold font-poppins tracking-tighter text-gray-950 mb-4 leading-[1.2] md:leading-[1.1] lg:leading-[1.3] xl:leading-[1.1] mx-auto sm:max-w-md md:max-w-lg lg:max-w-4xl"
           >
-            Pocket-Friendly Website Development in Indonesia.
+            <!-- Pocket-Friendly Website Development in Indonesia. -->
+            Make your dream business goal come true
           </h1>
           <p
-            class="text-center max-w-2xl mx-auto lg:text-xl mb-4 lg:mb-8"
-            data-sal="slide-up"
-            data-sal-delay="600"
-            data-sal-duration="500"
+            class="md:text-lg lg:text-xl text-center mx-auto mb-4 max-w-lg lg:max-w-2xl lg:mb-6"
           >
-            Get a High Quality Website without Overspending
+            <!-- Get a High Quality Website without Overspending -->
+            when you need us for improve your business, then come with us to
+            help your business have reach it, you just sit and feel that goal
           </p>
 
           <div
-            class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4"
+            class="w-full flex flex-col items-center justify-center gap-2 sm:flex-row"
           >
             <button
               type="button"
-              class="w-[90%] max-w-[250px] md:w-[180px] btn btn-primary"
-              title="Whatsapp Us"
-              data-sal="slide-up"
-              data-sal-delay="700"
-              data-sal-duration="500"
+              class="btn btn--primary w-full max-w-[250px] sm:max-w-[200px]"
             >
-              <i class="fa fa-whatsapp text-lg mr-1"></i>
-              Whatsapp
-            </button>
-
-            <button
-              type="button"
-              class="w-[90%] max-w-[250px] md:w-[180px] btn btn-primary-outline"
-              title="See pricing"
-              data-sal="slide-up"
-              data-sal-delay="750"
-              data-sal-duration="500"
-            >
-              See Pricing
+              Start Project
             </button>
           </div>
+        </section>
 
-          <!-- Header website illustration -->
-          <div
-            class="h-auto sm:h-[285px] md:h-[332px] lg:h-[418px] w-full max-w-[767px] rounded-t-3xl overflow-hidden mx-auto relative z-[1] mt-8"
+        <div id="header-image">
+          <figure
+            class="w-full max-w-4xl mx-auto min-h-[212px] sm:min-h-[337px] md:min-h-[397px] lg:min-h-[526px] xl:min-h-[555px]"
           >
             <img
-              src="./assets/header-image.jpg"
-              alt="Header illustration"
-              height="418"
-              width="767"
-              class="w-full h-auto sm:h-[285px] md:h-[332px] lg:h-[418px] pointer-events-none rounded-t-3xl max-w-[767px] mx-auto header-image-animation"
+              src="./assets/hero-image.png"
+              srcset="
+                ./assets/hero-image-480w.png  480w,
+                ./assets/hero-image-768w.png  768w,
+                ./assets/hero-image.png      1080w
+              "
+              sizes="(max-width: 768px) 480px, (min-width: 768px) 768px, (min-width: 1080px) 1080px"
+              alt="Hero image"
+              class="rounded-2xl"
+              loading="lazy"
             />
-          </div>
+          </figure>
+        </div>
+      </header>
 
-          <!-- Bottom Header Illustration -->
-          <img
-            src="./assets/header-bottom-illustration.svg"
-            class="h-56 md:h-60 lg:h-80 w-auto absolute left-0 bottom-[150px] sm:bottom-1/3 z-0 pointer-events-none"
-            alt="Top page illustration"
-            data-sal="fade"
-            data-sal-duration="1000"
-          />
-        </header>
-
-        <svg
-          width="1440"
-          height="4"
-          viewBox="0 0 1440 2"
-          class="w-full max-w-[1440px] h-auto mx-auto -translate-y-[2px]"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M680 0L0 2C0 2 414.441 4.00346 680 4C944.778 3.99655 1440 2 1440 2L680 0Z"
-            fill="url(#paint0_linear_203_241)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_203_241"
-              x1="679"
-              y1="1"
-              x2="679"
-              y2="3.00001"
-              gradientUnits="userSpaceOnUse"
+      <!-- About Us -->
+      <section id="about-us" class="py-12 xl:py-20 bg-[#ffffff]">
+        <div class="container p-4 md:p-6">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-center text-heading tracking-tighter mb-6 lg:mb-8"
+          >
+            <span
+              class="text-primary block text-xl font-sans font-semibold mb-1 md:mb-2 tracking-normal"
             >
-              <stop offset="0.3" stop-color="#D9D9D9" stop-opacity="0" />
-              <stop offset="0.5" stop-color="#0DC3F2" />
-              <stop offset="0.8" stop-color="#D9D9D9" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+              About us
+            </span>
+            Our Teammate
+          </h2>
+
+          <div
+            class="flex flex-col lg:flex-row-reverse lg:items-center gap-6 lg:gap-10"
+          >
+            <div
+              id="about-us-text"
+              class="mb-4 lg:mb-0 lg:w-1/2 text-base md:text-lg text-center lg:text-left md:max-w-xl md:mx-auto lg:max-w-[unset] lg:mx-0"
+            >
+              <p class="mb-4">
+                We move with make a Creative Strategy for help your business
+                goal, we help to improve your income by a services we have. make
+                your content look interesting and make people look for your
+                business
+              </p>
+              <p>
+                We move with make a Creative Strategy for help your business
+                goal, we help to improve your income by a services we have. make
+                your content look interesting and make people look for your
+                business
+              </p>
+            </div>
+
+            <div id="about-us-image" class="lg:w-1/2">
+              <figure
+                class="min-h-[232px] sm:min-h-[260px] lg:min-h-[282px] xl:min-h-[369px]"
+              >
+                <img
+                  src="./assets/about-us-image.png"
+                  alt="About us image"
+                  srcset="
+                    ./assets/about-us-image-480w.png  480w,
+                    ./assets/about-us-image-768w.png  768w,
+                    ./assets/about-us-image.png      1080w
+                  "
+                  sizes="(max-width: 768px) 480px, (min-width: 768px) 768px, (min-width: 1080px) 1080px"
+                  loading="lazy"
+                  class="w-full h-full max-w-sm lg:max-w-none mx-auto"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <div id="services" class="py-14 lg:py-20">
+        <div
+          class="flex flex-col lg:flex-row lg:gap-10 container p-4 md:p-6 lg:items-center"
+        >
+          <section
+            class="text-center w-full lg:text-left md:max-w-xl md:mx-auto lg:max-w-[unset] lg:mx-0 flex-grow mb-6 lg:mb-0"
+          >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-heading tracking-tighter mb-4 md:mb-6"
+            >
+              <span
+                class="text-primary block text-xl font-sans font-semibold mb-1 md:mb-2 tracking-normal"
+              >
+                Services
+              </span>
+              Perfect and Fast Movement
+            </h2>
+            <p class="lg:text-lg">
+              We move with make a Creative Strategy for help your business goal,
+              we help to improve your income by a services we have. make your
+              content look interesting and make people look for your business
+            </p>
+          </section>
+          <div class="w-full lg:min-w-[50%]">
+            <ul class="grid grid-rows-2 grid-cols-2 gap-4">
+              <li
+                class="bg-[#ffffff] border border-white-alt px-4 py-6 rounded flex flex-col items-center justify-center text-center gap-4 cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out group"
+              >
+                <div
+                  class="h-20 w-20 border bg-heading border-heading rounded-full flex items-center justify-center text-white transition-all duration-300 ease-in-out"
+                >
+                  <i class="fa fa-tv text-2xl"></i>
+                </div>
+                <span class="block mx-auto max-w-[150px]"
+                  >Social Media Management</span
+                >
+              </li>
+
+              <li
+                class="bg-[#ffffff] border border-white-alt px-4 py-6 rounded flex flex-col items-center justify-center text-center gap-4 cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out group"
+              >
+                <div
+                  class="h-20 w-20 border bg-heading border-heading rounded-full flex items-center justify-center text-white transition-all duration-300 ease-in-out"
+                >
+                  <i class="far fa-code text-3xl"></i>
+                </div>
+                <span class="block mx-auto max-w-[150px]"
+                  >Website Development</span
+                >
+              </li>
+
+              <li
+                class="bg-[#ffffff] border border-white-alt px-4 py-6 rounded flex flex-col items-center justify-center text-center gap-4 cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out group"
+              >
+                <div
+                  class="h-20 w-20 border bg-heading border-heading rounded-full flex items-center justify-center text-white transition-all duration-300 ease-in-out"
+                >
+                  <i class="far fa-pen-nib text-3xl"></i>
+                </div>
+                <span class="block mx-auto max-w-[150px]">Design</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <figure class="container hidden lg:block lg:h-[268px] xl:h-[345px]">
+          <img
+            loading="lazy"
+            src="./assets/process.png"
+            alt="Development process"
+          />
+        </figure>
       </div>
 
-      <!-- <img
-        src="./assets/divider.svg"
-        alt="Divider"
-        class="w-full max-w-[1440px] h-auto mx-auto"
-      /> -->
+      <!-- Portfolio -->
+      <div id="portfolio" class="py-14 lg:py-20 bg-[#ffffff]">
+        <section class="container relative p-4 md:p-6 mb-4">
+          <!-- Overlays -->
+          <img
+            src="./assets/header-overlay.png"
+            alt="Overlay 2"
+            class="hidden md:block w-66 h-66 absolute -z-10 bottom-[45%] -left-0"
+          />
+          <img
+            src="./assets/header-overlay.png"
+            alt="Overlay 1"
+            class="hidden md:block absolute w-40 h-40 -z-10 -bottom-5 right-0"
+          />
 
-      <div class="h-screen"></div>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-heading tracking-tighter mb-4 text-center md:mb-6"
+          >
+            <span
+              class="text-primary block text-xl font-sans font-semibold mb-1 md:mb-2 tracking-normal"
+            >
+              Our Portfolio
+            </span>
+            What do we do
+          </h2>
+
+          <p class="mx-auto text-center lg:max-w-2xl">
+            all projects that we have already done, proven can help to use more
+            comfortable, then can used by client from our business
+          </p>
+        </section>
+
+        <div
+          class="container relative z-30 grid grid-cols-1 md:grid-cols-2 md:gap-4"
+        >
+          <!-- Featured Project 1 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-1.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Project 2 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-2.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Project 3 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-3.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Project 4 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-4.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Project 5 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-5.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Project 6 -->
+          <div
+            class="relative w-full group h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden md:rounded"
+          >
+            <img
+              loading="lazy"
+              src="./assets/portfolios/sample-6.png"
+              alt="Example portfolio"
+              class="absolute -z-[1] w-full h-full object-cover"
+            />
+            <div
+              class="absolute opacity-0 invisible z-[1] bg-black group-hover:bg-opacity-75 group-hover:visible group-hover:opacity-100 inset-0 w-full h-full transition-all duration-200 ease-in-out text-white p-4 md:p-6 flex flex-col justify-center items-center text-center"
+            >
+              <p class="text-xl font-semibold mb-2 md:text-2xl">
+                Example Portfolio
+              </p>
+              <p class="text-sm max-w-xs text-white-alt">
+                These images are only used as examples and are obtained from
+                <a
+                  href="https://dribbble.com/halolab"
+                  class="font-bold text-white"
+                  title="Halo Lab."
+                  >Halo Lab</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container px-4 pt-12 md:px-6 md:pt-14 flex items-center justify-center"
+        >
+          <button type="button" class="btn btn--default w-full max-w-[200px]">
+            See all Portfolio
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div id="pricing" class="py-14 lg:py-20">
+        <section class="container relative p-4 md:p-6 mb-4">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-heading tracking-tighter mb-4 text-center md:mb-6"
+          >
+            <span
+              class="text-primary block text-xl font-sans font-semibold mb-1 md:mb-2 tracking-normal"
+            >
+              Pricing
+            </span>
+            Our Pricing Table
+          </h2>
+
+          <p class="mx-auto text-center lg:max-w-2xl">
+            It is along estabilished fact that a reader will be distracted by
+            the readable content of a page when looking at its layout
+          </p>
+        </section>
+
+        <div class="container p-4 md:p-6 pricing-container">
+          <div class="w-full pricing-box text-center">
+            <h3>Starter</h3>
+            <a href="#" class="btn btn--primary">
+              <i class="far fa-phone mr-1"></i>
+              Contact us
+            </a>
+            <ul>
+              <li>Free hosting</li>
+              <li class="text-red-500">
+                <i class="fa fa-times mr-0.5"></i>
+                Free Domain
+              </li>
+              <li>Free SSL</li>
+              <li>Max 5 pages</li>
+              <li>Responsive Web Design</li>
+              <li>Built-in Basic SEO</li>
+              <li>Free 3x Revision</li>
+            </ul>
+          </div>
+
+          <div
+            class="w-full pricing-box text-center bg-heading text-white-alt border-heading"
+          >
+            <h3 class="text-white inverted">Enterprise</h3>
+            <a href="#" class="btn btn--default--inverted">
+              <i class="far fa-phone mr-1"></i>
+              Contact us
+            </a>
+            <ul class="inverted">
+              <li>Free VPS Server (adapted to the scale of the application)</li>
+              <li>Free Domain with Cloudflare full control</li>
+              <li>Free Setup VPS</li>
+              <li>Responsive Web Design</li>
+              <li>Cross-Browser Support</li>
+              <li>Unlimited Revision</li>
+              <li>
+                Suitable for creating Dashboards, SaaS Applications, e-Commerce,
+                or other Website Applications
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full pricing-box text-center">
+            <h3>Professional</h3>
+            <a href="#" class="btn btn--primary">
+              <i class="far fa-phone mr-1"></i>
+              Contact us
+            </a>
+            <ul>
+              <li>Free hosting</li>
+              <li class="text-green-500">
+                <i class="far fa-check mr-0.5"></i>
+                Free Domain
+              </li>
+              <li>Free SSL</li>
+              <li>Max 10 pages</li>
+              <li>Responsive Web Design</li>
+              <li>Built-in Basic SEO</li>
+              <li>Free 15x Revision</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Banner / Call to Action Banner -->
+      <div id="cta-banner" class="py-14 lg:py-20 bg-[#ffffff]">
+        <div
+          class="container relative p-4 md:p-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-16"
+        >
+          <!-- Overlays -->
+          <img
+            src="./assets/header-overlay.png"
+            alt="Overlay 2"
+            class="hidden lg:block w-66 h-66 absolute -z-10 -bottom-12 -left-1"
+          />
+          <img
+            src="./assets/header-overlay.png"
+            alt="Overlay 1"
+            class="hidden lg:block absolute w-40 h-40 -z-10 top-16 -right-12"
+          />
+
+          <section
+            class="w-full flex-grow text-center lg:text-left xl:max-w-[40%]"
+          >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] xl:leading-tight font-poppins font-bold text-heading tracking-tighter mb-4 md:mb-6"
+            >
+              Interesting Collaboration With Us?
+            </h2>
+            <p class="mb-4 md:mb-6">Help you to reach your business goal</p>
+
+            <button type="button" class="btn btn--primary w-full max-w-[200px]">
+              Get Started
+            </button>
+          </section>
+
+          <figure class="w-full flex-grow">
+            <img
+              loading="lazy"
+              alt="CTA Banner Image"
+              src="./assets/cta-banner-image.png"
+              srcset="
+                ./assets/cta-banner-image-480w.png  480w,
+                ./assets/cta-banner-image-768w.png  768w,
+                ./assets/cta-banner-image.png      1080w
+              "
+              sizes="(max-width: 768px) 480px, (min-width: 768px) 768px, (min-width: 1080px) 1080px"
+              class="w-full h-full max-w-sm lg:max-w-none mx-auto"
+            />
+          </figure>
+        </div>
+      </div>
     </main>
+
+    <footer class="py-14 lg:pt-20">
+      <div class="container p-4 md:p-6">
+        <img
+          src="./assets/logo.svg"
+          alt="Digipro Logo"
+          class="w-full max-w-[100px] mx-auto mb-8"
+        />
+        <p class="text-center">
+          Copyright @ 2023 <span class="font-bold text-heading">Digipro</span>.
+          All Right Reserved
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,20 +1,41 @@
 .btn {
   @apply py-3 px-5;
-  @apply rounded-lg;
+  @apply rounded;
   @apply transition-all duration-200 ease-in-out;
-  @apply font-semibold;
+  @apply font-semibold text-sm;
+  @apply xl:text-base;
 
-  &-primary {
+  &--primary {
     @apply border border-primary;
     @apply bg-primary text-white;
     @apply hover:bg-primary-700 hover:border-primary-700;
     @apply focus:bg-primary-700 focus:border-primary-700 focus:outline-primary;
-    @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25;
+    // @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25;
+    @apply focus:ring-4 focus:ring-primary focus:ring-opacity-25;
 
-    &-outline {
+    &--outline {
       @apply border border-primary;
       @apply text-primary bg-transparent;
-      @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25;
+      // @apply hover:ring-4 hover:ring-primary hover:ring-opacity-25 hover:bg-primary hover:bg-opacity-10;
+      @apply focus:ring-4 focus:ring-primary focus:ring-opacity-25 focus:bg-primary focus:bg-opacity-10;
+    }
+  }
+
+  &--default {
+    @apply bg-slate-950 text-white;
+    @apply hover:bg-slate-800;
+    @apply focus:bg-slate-800 focus:ring-4 focus:ring-slate-800 focus:ring-opacity-25;
+
+    &--outline {
+      @apply bg-transparent border border-slate-950 text-slate-950;
+      @apply hover:bg-slate-100;
+      @apply focus:bg-slate-100;
+    }
+
+    &--inverted {
+      @apply bg-white text-heading;
+      @apply hover:bg-white-alt;
+      @apply focus:bg-white-alt focus:ring-4 focus:ring-white-alt focus:ring-opacity-25;
     }
   }
 }

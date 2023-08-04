@@ -1,83 +1,91 @@
-$nav_menu_height: 296px;
+.nav {
+  @apply bg-white fixed z-40 top-0 left-0 w-full;
+  @apply lg:bg-opacity-75 lg:backdrop-blur;
 
-.navigation {
-  // Navigation Toggler
-  &-toggler {
-    @apply w-8 h-8;
+  // Navigation container
+  &-container {
+    @apply container;
+    @apply p-4 lg:p-6;
+    @apply flex flex-row flex-wrap items-center justify-between;
+  }
+
+  // Navigation toggler
+  &__toggler {
+    @apply w-11 h-11;
     @apply flex flex-col items-center justify-center;
+    @apply lg:hidden;
 
-    @screen lg {
-      @apply hidden;
-    }
-
-    > .icon {
-      @apply w-7 h-[2px] bg-white;
-      @apply absolute z-0;
-      @apply transition-all duration-200 ease-in-out;
+    & > .icon {
+      @apply w-6 h-[1.4px];
+      @apply bg-heading absolute;
+      @apply transition-all duration-[250] ease-in-out;
 
       &:nth-child(1) {
-        @apply -translate-y-2.5;
+        @apply translate-y-2;
+        animation: nav-icon-1 300ms ease-in-out forwards;
       }
 
       &:nth-child(3) {
-        @apply translate-y-2.5;
+        @apply -translate-y-2;
+        animation: nav-icon-3 300ms ease-in-out forwards;
       }
     }
 
     &.active > .icon {
       &:nth-child(1) {
-        @apply translate-y-0 rotate-[135deg];
+        animation: nav-icon-1--active 300ms ease-in-out forwards;
       }
 
       &:nth-child(2) {
-        @apply opacity-0 invisible;
+        @apply w-0;
       }
 
       &:nth-child(3) {
-        @apply translate-y-0 rotate-[225deg];
+        animation: nav-icon-3--active 300ms ease-in-out forwards;
       }
     }
   }
 
-  // Navigation Menu
+  // Navigation menu
   &-menu {
-    @apply w-full h-0 mt-4;
-    @apply transition-all duration-200 ease-in-out overflow-y-hidden;
+    @apply w-full h-full bg-white lg:bg-transparent;
+    @apply fixed top-20 left-0 -z-10;
+    @apply opacity-0 invisible -translate-y-4;
+    @apply transition-all duration-300 ease-in-out;
 
-    @screen lg {
-      @apply mt-0 w-full h-auto;
-    }
+    @apply lg:static lg:z-0 lg:w-auto lg:h-auto;
+    @apply lg:opacity-100 lg:visible lg:translate-y-0;
+    @apply lg:flex lg:flex-row lg:flex-grow;
 
     &.active {
-      height: $nav_menu_height;
+      @apply opacity-100 visible translate-y-0;
+    }
 
-      @screen lg {
-        height: auto;
+    &-links {
+      @apply flex flex-col items-start justify-start;
+      @apply lg:flex-row lg:items-center lg:justify-end lg:gap-x-6 xl:gap-x-8 lg:flex-grow;
+
+      > li {
+        @apply w-full;
+        @apply lg:w-auto;
+
+        > a {
+          @apply py-2.5 block;
+          @apply lg:text-base xl:text-lg;
+          @apply hover:text-heading;
+          @apply focus:text-heading;
+          @apply lg:whitespace-nowrap;
+        }
       }
     }
 
-    > ul {
-      @apply bg-zinc-800 lg:bg-transparent;
-      @apply rounded-md p-4;
+    &-buttons {
+      @apply flex flex-col items-center justify-center gap-2;
+      @apply lg:flex-row lg:justify-end flex-grow;
 
-      @screen lg {
-        @apply flex flex-row items-center justify-center xl:gap-2 2xl:gap-4;
-        @apply p-0;
-
-        > li {
-          @apply inline-block;
-
-          > a {
-            @apply inline-block xl:whitespace-nowrap;
-          }
-        }
-      }
-
-      > li {
-        > a {
-          @apply block p-2.5 rounded;
-          @apply text-white hover:text-primary focus:text-primary;
-        }
+      > button {
+        @apply w-full;
+        @apply lg:w-auto;
       }
     }
   }

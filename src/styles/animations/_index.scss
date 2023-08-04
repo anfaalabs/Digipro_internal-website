@@ -1,2 +1,22 @@
 @import "./navigation-icon.scss";
 @import "./header-animation.scss";
+
+.animate {
+  &-flip {
+    opacity: 0;
+    transform: rotatex(180deg);
+    animation: flip 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes flip {
+  0% {
+    opacity: 0;
+    transform: rotatex(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotatex(0);
+  }
+}

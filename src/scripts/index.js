@@ -14,7 +14,7 @@ import NavigationToggler from "./navbar/navigation-toggler";
   });
 
   new NavigationToggler({
-    toggler: document.querySelector(".navigation-toggler"),
-    target: document.querySelector(".navigation-menu"),
+    toggler: document.querySelector(".nav__toggler"),
+    target: document.querySelector(".nav-menu"),
   }).activate();
 })();
